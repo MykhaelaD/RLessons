@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <title>R Markdown Lessons</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header>
+        <h2 class="logo">MSMU</h2>
+        <nav class="navigation">
+            <a href=""#>Home</a>
+            <a href=""#>Instructions</a>
+            <a href=""#>Lessons</a>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <span class="icon-close">
+            <ion-icon name="close-circle"></ion-icon>
+        </span>
+
+        <div class = "form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">
+                    Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>New user? <a href="#"
+                    class="register-link">Register for an account</a></p>
+                </div>
+            </form>
+        </div>
+        <div class = "form-box register">
+            <h2>Registration</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#"
+                    class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <div id="lessonContent"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        // Define your lesson data directly in JavaScript
+        const lessonData = [
+            {
+                Class: 'text',
+                Output: 'This is a text output for the lesson.',
+            },
+            {
+                Class: 'cmd_question',
+                Output: 'This is a command question.',
+                CorrectAnswer: 'correct_answer',
+                AnswerTests: 'test1',
+                Hint: 'This is a hint for the question.',
+            },
+            // Add more lesson items as needed
+        ];
+    
+        function processLessonData(lessonData) {
+            let outputHTML = '';
+    
+            for (const item of lessonData) {
+                const { Class, Output, CorrectAnswer, AnswerTests, Hint } = item;
+    
+                switch (Class) {
+                    case 'text':
+                        outputHTML += `<p>${Output}</p>`;
+                        break;
+                    case 'cmd_question':
+                        outputHTML += `<p>${Output}</p>`;
+                        outputHTML += `<input type="text" id="userAnswer" placeholder="Your Answer">`;
+                        outputHTML += `<button onclick="checkAnswer('${CorrectAnswer}', '${AnswerTests}', '${Hint}')">Submit Answer</button>`;
+                        break;
+                    // Handle other classes as needed
+                    default:
+                        break;
+                }
+            }
+    
+            document.getElementById('lessonContent').innerHTML = outputHTML;
+        }
+    
+        // Process the lesson data
+        processLessonData(lessonData);
+    </script>
+  
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+<!-- Embedded Shiny App -->
+<iframe src="http://127.0.0.1:6868" width="800" height="600"></iframe>
+
+    
+</body>
+</html>
