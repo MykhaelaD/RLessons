@@ -15,90 +15,30 @@
             <a href=""#>Home</a>
             <a href=""#>Instructions</a>
             <a href=""#>Lessons</a>
-            <button class="btnLogin-popup">Login</button>
+            <button id="btnSignOut" class="btnSignOut">Sign Out</button>
         </nav>
     </header>
     <div class="wrapper">
-        <span class="icon-close">
-            <ion-icon name="close-circle"></ion-icon>
-        </span>
-
-        <div class="bio-information">
-            <p>Biostatistics Class</p>
-           <!--  <p>Welcome to the Biostatistics class at MSMU!</p> -->
-           <!--  <p>This class covers essential statistical concepts used in biology and health sciences.</p> -->
-            
-            <!-- Add more information or content here -->
-        </div>
-
-
-        <div class = "form-box login">
-            <h2>Login</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="mail"></ion-icon>
-                    </span>
-                    <input type="email" required>
-                    <label>Email</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="lock-closed"></ion-icon>
-                    </span>
-                    <input type="password" required>
-                    <label>Password</label>
-                </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox">
-                    Remember me</label>
-                    <a href="#">Forgot Password?</a>
-                </div>
-                <button type="submit" class="btn">Login</button>
-                <div class="login-register">
-                    <p>New user? <a href="#"
-                    class="register-link">Register for an account</a></p>
-                </div>
-            </form>
-        </div>
-        <div class = "form-box register">
-            <h2>Registration</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="person"></ion-icon>
-                    </span>
-                    <input type="text" required>
-                    <label>Username</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="mail"></ion-icon>
-                    </span>
-                    <input type="email" required>
-                    <label>Email</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="lock-closed"></ion-icon>
-                    </span>
-                    <input type="password" required>
-                    <label>Password</label>
-                </div>
-                <div class="remember-forgot">
-                    
-                </div>
-                <button type="submit" class="btn">Register</button>
-                <div class="login-register">
-                    <p>Already have an account? <a href="#"
-                    class="login-link">Login</a></p>
-                </div>
-            </form>
-        </div>
+        <p>The Biostatistics course at our institution offers a comprehensive exploration of statistical principles vital in biological and health sciences. With a specialized emphasis on the R language, students delve into the application of statistical methods within the context of biological research and health data analysis. The curriculum covers a wide array of topics, ranging from foundational statistical theories to practical hands-on sessions utilizing R programming. Through engaging lessons, students learn to manipulate data, perform statistical analyses, and visualize results using R, empowering them with essential skills in conducting rigorous and insightful statistical research within the realm of life sciences.</p>
     </div>
-    <p>The Biostatistics course at our institution offers a comprehensive exploration of statistical principles vital in biological and health sciences. With a specialized emphasis on the R language, students delve into the application of statistical methods within the context of biological research and health data analysis. The curriculum covers a wide array of topics, ranging from foundational statistical theories to practical hands-on sessions utilizing R programming. Through engaging lessons, students learn to manipulate data, perform statistical analyses, and visualize results using R, empowering them with essential skills in conducting rigorous and insightful statistical research within the realm of life sciences.</p>
-    
 
+    <script>
+        // Get a reference to the sign-out button
+        const btnSignOut = document.getElementById('btnSignOut');
+    
+        // Function to handle sign-out
+        function signOut() {
+            // Redirect the user to the main page (index.js) upon sign-out
+            window.location.href = 'index.html';
+        }
+    
+        // Add event listener to the sign-out button
+        btnSignOut.addEventListener('click', function() {
+            // Perform sign-out when the button is clicked
+            signOut();
+        });
+    </script>
+    
 
     <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
