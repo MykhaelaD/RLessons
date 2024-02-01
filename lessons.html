@@ -15,79 +15,29 @@
             <a href=""#>Home</a>
             <a href=""#>Instructions</a>
             <a href=""#>Lessons</a>
-            <button class="btnLogin-popup">Login</button>
+            <button id="btnSignOut" class="btnSignOut">Sign Out</button>
         </nav>
     </header>
     <div class="wrapper">
-        <span class="icon-close">
-            <ion-icon name="close-circle"></ion-icon>
-        </span>
-
-        <div class = "form-box login">
-            <h2>Login</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="mail"></ion-icon>
-                    </span>
-                    <input type="email" required>
-                    <label>Email</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="lock-closed"></ion-icon>
-                    </span>
-                    <input type="password" required>
-                    <label>Password</label>
-                </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox">
-                    Remember me</label>
-                    <a href="#">Forgot Password?</a>
-                </div>
-                <button type="submit" class="btn">Login</button>
-                <div class="login-register">
-                    <p>New user? <a href="#"
-                    class="register-link">Register for an account</a></p>
-                </div>
-            </form>
-        </div>
-        <div class = "form-box register">
-            <h2>Registration</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="person"></ion-icon>
-                    </span>
-                    <input type="text" required>
-                    <label>Username</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="mail"></ion-icon>
-                    </span>
-                    <input type="email" required>
-                    <label>Email</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="lock-closed"></ion-icon>
-                    </span>
-                    <input type="password" required>
-                    <label>Password</label>
-                </div>
-                <div class="remember-forgot">
-                    
-                </div>
-                <button type="submit" class="btn">Register</button>
-                <div class="login-register">
-                    <p>Already have an account? <a href="#"
-                    class="login-link">Login</a></p>
-                </div>
-            </form>
-        </div>
+        <p>Hello</p>
     </div>
-
+    
+    <script>
+        // Get a reference to the sign-out button
+        const btnSignOut = document.getElementById('btnSignOut');
+    
+        // Function to handle sign-out
+        function signOut() {
+            // Redirect the user to the main page (index.js) upon sign-out
+            window.location.href = 'index.html';
+        }
+    
+        // Add event listener to the sign-out button
+        btnSignOut.addEventListener('click', function() {
+            // Perform sign-out when the button is clicked
+            signOut();
+        });
+    </script>
 
 <!---
     <div id="lessonContent"></div>
@@ -150,95 +100,17 @@
 
 
 <!-- Add the latest Firebase SDK -->
-<script defer src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js"></script>
-<script defer src="https://www.gstatic.com/firebasejs/10.7.2/firebase-storage.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-storage.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+<script src="lesson.js" type="module"></script>
+<script type="module">
+    import {_getProvider, getApp as e, _registerComponent as t, registerVersion as r, SDK_VERSION as n} from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
+  </script>
 
-<script defer>
-    // Initialize Firebase
-    const firebaseConfig = {
-    apiKey: "AIzaSyABxSUHqekjFDhnyFGFKQd3weF-YaKw4ls",
-    authDomain: "seniorproject-7e271.firebaseapp.com",
-    databaseURL: "https://seniorproject-7e271-default-rtdb.firebaseio.com",
-    projectId: "seniorproject-7e271",
-    storageBucket: "seniorproject-7e271.appspot.com",
-    messagingSenderId: "449257268811",
-    appId: "1:449257268811:web:5c7b798acb6aff00758fce",
-    measurementId: "G-TXKSFRLVBJ"
-    };
-
-    firebase.initializeApp(firebaseConfig);
-</script>
-
-<script defer>
-
-    const storage = firebase.storage();
-    const storageRef = storage.ref();
-
-    // Reference to your lesson file in Firebase Storage
-    const lessonFileRef = storageRef.child('gs://seniorproject-7e271.appspot.com/lesson.yaml');
-
-    // Get the download URL of the lesson file
-    lessonFileRef.getDownloadURL()
-        .then((url) => {
-            // Fetch the lesson data using the obtained URL
-            return fetchLessonData(url);
-        })
-        .then((data) => {
-            // Process and display the lesson data
-            processLessonData(data);
-        })
-        .catch((error) => {
-            console.error('Error getting download URL:', error);
-        });
-
-    // Function to fetch YAML content
-    async function fetchLessonData(file) {
-        const response = await fetch(file);
-        const text = await response.text();
-        return jsyaml.load(text);
-    }
-
-    // Assuming you have a function to process lesson data
-    function processLessonData(lessonData) {
-        let outputHTML = '';
-
-        for (const item of lessonData) {
-            const { Class, Output, CorrectAnswer, AnswerTests, Hint } = item;
-
-            switch (Class) {
-                case 'text':
-                    outputHTML += `<p>${Output}</p>`;
-                    break;
-                case 'cmd_question':
-                    outputHTML += `<p>${Output}</p>`;
-                    outputHTML += `<input type="text" id="userAnswer" placeholder="Your Answer">`;
-                    outputHTML += `<button onclick="checkAnswer('${CorrectAnswer}', '${AnswerTests}', '${Hint}')">Submit Answer</button>`;
-                    break;
-                case 'meta':
-                    outputHTML += `<h1>${item.Course} - ${item.Lesson}</h1>`;
-                    // Include other properties as needed
-                    break;
-                // Add cases for other classes as needed
-                default:
-                    break;
-            }
-        }
-
-        document.getElementById('lessonContent').innerHTML = outputHTML;
-    }
-
-
-// Fetch and process the lesson data
-//const lessonFile = 'gs://seniorproject-7e271.appspot.com/lesson.yaml'; // Update with the correct path to your YAML file within Firebase Storage
-//fetchLessonData(lessonFile)
-    //.then((data) => processLessonData(data))
-    //.catch((error) => console.error(error));
-
-</script>
 
 <!-- Embedded Shiny App -->
-<iframe src="http://127.0.0.1:6868" width="800" height="600"></iframe>
+<iframe src="http://127.0.0.1:5976" width="800" height="600"></iframe>
 
     
 </body>
