@@ -350,3 +350,25 @@ iframe {
   
   /* You can add more styles based on your design requirements */
   
+
+  /* Style for the sign-out button */
+.navigation .btnSignOut {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid black;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: black;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+/* Style for the sign-out button on hover */
+.navigation .btnSignOut:hover {
+    background: grey;
+    color: #162938;
+}
