@@ -24,6 +24,20 @@ server <- function(input, output) {
       output$result <- renderText(paste("Result:", as.character(result)))
     }
   })
+  
+  # Function to install and load packages dynamically
+  installAndLoadPackage <- function(package_name) {
+    if (!requireNamespace(package_name, quietly = TRUE)) {
+      install.packages(package_name, dependencies = TRUE)
+    }
+    library(package_name, character.only = TRUE)
+  }
+  
+  observeEvent(input$installButton, {
+    package_name <- isolate(input$package)
+    installAndLoadPackage(package_name)
+    output$result <- renderText(paste("Installed and loaded package:", package_name))
+  })
 }
 
 shinyApp(ui, server)
