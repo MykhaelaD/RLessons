@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,
-    initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R Markdown Lessons</title>
     <link rel="stylesheet" href="style1.css">
     <link rel="icon" href="data:,">
@@ -19,130 +18,171 @@
 </head>
 <body>
     <header>
-        <h2 class="logo">MSMU</h2>
+        <div class="logo">
+            <img src="mountLogo3.jpg" alt="MSMU Logo">
+        </div>
+        
         <nav class="navigation">
-            <a href="home.html"#>Home</a>
-            <a href="instructions.html"#>Instructions</a>
-            <a href="lessons.html"#>Lessons</a>
+            <a href="home.html">Home</a>
+            <a href="instructions.html">Getting Started with R</a>
+            <a href="lessons.html">Lessons</a>
             <button id="btnSignOut" class="btnSignOut">Sign Out</button>
         </nav>
     </header>
-    <div class="wrapper">
-        <p>Hello</p>
-        </div>
-        <span class="icon-close">
-            <ion-icon name="close-circle"></ion-icon>
-        </span>
 
-        <div class = "form-box login">
-            <h2>Login</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="mail"></ion-icon>
-                    </span>
-                    <input type="email" required id="email">
-                    <label>Email</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="lock-closed"></ion-icon>
-                    </span>
-                    <input type="password" required id="password">
-                    <label>Password</label>
-                </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox">
-                    Remember me</label>
-                    <a href="#">Forgot Password?</a>
-                </div>
-                <div>
-                    <button type="submit" class="btn">Login</button>
-                </div>
-                <div class="login-register">
-                    <p>New user? <a href="#"
-                    class="register-link">Register for an account</a></p>
-                </div>
-            </form>
-        </div>
-        <div class = "form-box register">
-            <h2>Registration</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="person"></ion-icon>
-                    </span>
-                    <input type="text" required id="username">
-                    <label>Username</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="mail"></ion-icon>
-                    </span>
-                    <input type="email" required id="email1">
-                    <label>Email</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="lock-closed"></ion-icon>
-                    </span>
-                    <input type="password" required id="password1">
-                    <label>Password</label>
-                </div>
-                <div class="remember-forgot">
-                    
-                </div>
-                <button type="submit" class="btn" id="signUp">Register</button>
-                <div class="login-register">
-                    <p>Already have an account? <a href="#"
-                    class="login-link">Login</a></p>
-                </div>
-            </form>
+    <div class="container1">
+        <div class="rectangle-box4">
+            <div class="text">
+                BIOL 205 R/RStudio Review Video
+            </div>
+            <div class="link-container">
+                <a href="https://msmaryedu-my.sharepoint.com/personal/e_m_holland_msmary_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fe%5Fm%5Fholland%5Fmsmary%5Fedu%2FDocuments%2FLibGuides%2FBIOL%20205%2FReview%20R%2Emp4&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview">Dr. Hartnett's Video Review</a>
+            </div>
         </div>
 
-        <div class="file-content" id="fileContent1">
-            <h2>Text Content</h2>
-            <pre id="textFileContent"></pre>
+        <div class="rectangle-box2">
+            <div class="text">
+                Open Access Data Repositories
+            </div>
+        </div>
+        <div class="additional-text1">
+            <p>
+                Many of the following databases are multidisciplinary, but these are links to the biological sciences sets when possible.
+            </p>
+            <ul>
+                <li>
+                    <a href="https://data.4tu.nl/categories/13578">Biological Sciences Datasets</a> From 4TU.ResearchData
+                </li>
+                <li>
+                    <a href="https://figshare.com/categories/Biological_sciences">Biological Sciences from figshare</a>
+                </li>
+                <li>
+                    <a href="https://oad.simmons.edu/oadwiki/Data_repositories#Biology">Biology Data Repositories</a>From the Open Access Directory
+                </li>
+                <li>
+                    <a href="https://commons.datacite.org/">DataCite</a>Find, access, and reuse datasets from over 1000 different major data centers and repositories
+                </li>
+                <li>
+                    <a href="https://datadryad.org/search">Dryad</a>
+                </li>
+                <li>
+                    <a href="https://dataverse.harvard.edu/dataverse/harvard">Harvard Dataverse</a>Open to all researchers worldwide in all disciplines
+                </li>
+                <li>
+                    <a href="https://data.mendeley.com/">Mendeley Data</a>
+                </li>
+                <li>
+                    <a href="https://zenodo.org/">Zenodo</a>
+                </li>
+            </ul>
         </div>
 
-        <!-- Display R code from example.R -->
-        <div class="file-content" id="fileContent2">
-            <h2>R Code</h2>
-            <pre><code class="language-r" id="rCodeInit"></code></pre>
+        <div class="rectangle-box3">
+            <div class="text5">
+                Data Repositories & Registries
+            </div>
+        </div>
+        <div class="additional-text2">
+            <p>
+                Some of the repositories in this list hold open access data but are not entirely open access.
+            </p>
+            <ul>
+                <li>
+                    <a href="https://www.nature.com/sdata/policies/repositories#life">Biological Sciences Data Respositories</a> From Nature
+                </li>
+                <li>
+                    <a href="https://catalog.data.gov/dataset">Data.gov</a> Data published by the Federal Government across the agencies
+                </li>
+                <li>
+                    <a href="https://www.re3data.org/">re3data</a> Working to create a global registry of research data repositories
+
+                </li>
+            </ul>
         </div>
 
-        <!-- Display R code from example.R -->
-        <div class="file-content" id="fileContent3">
-            <h2>R Code</h2>
-            <pre><code class="language-r" id="rCodeCustom"></code></pre>
+        <div class="wrapper">
+            <!-- Link to the video -->
+            <p>Watch our instructional video:</p>
+            <a href="https://msmaryedu-my.sharepoint.com/personal/e_m_holland_msmary_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fe%5Fm%5Fholland%5Fmsmary%5Fedu%2FDocuments%2FLibGuides%2FBIOL%20205%2FReview%20R%2Emp4&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview">Watch Video</a>
+            <span class="icon-close">
+                <ion-icon name="close-circle"></ion-icon>
+            </span>
+
+            <div class = "form-box login">
+                <h2>Login</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </span>
+                        <input type="email" required id="email">
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="password" required id="password">
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">
+                        Remember me</label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn">Login</button>
+                    </div>
+                    <div class="login-register">
+                        <p>New user? <a href="#"
+                        class="register-link">Register for an account</a></p>
+                    </div>
+                </form>
+            </div>
+            <div class = "form-box register">
+                <h2>Registration</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="person"></ion-icon>
+                        </span>
+                        <input type="text" required id="username">
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </span>
+                        <input type="email" required id="email1">
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="password" required id="password1">
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        
+                    </div>
+                    <button type="submit" class="btn" id="signUp">Register</button>
+                    <div class="login-register">
+                        <p>Already have an account? <a href="#"
+                        class="login-link">Login</a></p>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 
-    <script>
-        // Get a reference to the sign-out button
-        const btnSignOut = document.getElementById('btnSignOut');
-    
-        // Function to handle sign-out
-        function signOut() {
-            // Redirect the user to the main page (index.js) upon sign-out
-            window.location.href = 'index.html';
-        }
-    
-        // Add event listener to the sign-out button
-        btnSignOut.addEventListener('click', function() {
-            // Perform sign-out when the button is clicked
-            signOut();
-        });
-    </script>
+    <!-- Prism CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css" rel="stylesheet" />
 
- <!-- Prism CSS -->
- <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css" rel="stylesheet" />
+    <!-- Prism JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
 
- <!-- Prism JS -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
- 
-
-    <script src="script1.js"></script>
+    <script type="module" src="script1.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

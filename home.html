@@ -10,37 +10,113 @@
 </head>
 <body>
     <header>
-        <h2 class="logo">MSMU</h2>
+        <div class="logo">
+            <img src="mountLogo3.jpg" alt="MSMU Logo">
+        </div>
+    
         <nav class="navigation">
-            <a href=""#>Home</a>
-            <a href=""#>Instructions</a>
-            <a href=""#>Lessons</a>
+            <a href="home.html"#>Home</a>
+            <a href="instructions.html"#>Getting Started with R</a>
+            <a href="lessons.html"#>Lessons</a>
             <button id="btnSignOut" class="btnSignOut">Sign Out</button>
         </nav>
     </header>
-    <div class="wrapper">
-        <p>The Biostatistics course at our institution offers a comprehensive exploration of statistical principles vital in biological and health sciences. With a specialized emphasis on the R language, students delve into the application of statistical methods within the context of biological research and health data analysis. The curriculum covers a wide array of topics, ranging from foundational statistical theories to practical hands-on sessions utilizing R programming. Through engaging lessons, students learn to manipulate data, perform statistical analyses, and visualize results using R, empowering them with essential skills in conducting rigorous and insightful statistical research within the realm of life sciences.</p>
+
+    <div class="container">
+        <div class="logo1">
+            <img src="BIOL205logo.png" alt="BIO Logo">
+        </div>
+
+        <div class="rectangle-box">
+            <div class="text">
+                Overview
+            </div>
+        </div>
+        <div class="long-text">
+            BIOL 205 Biostatistics is taught by Dr. Rachel Hartnett. Questions about the course and projects relating to the course should be sent directly to Dr. Hartnett. Dr. Hartnett's office can be found in COAD 216A and she can be reached at r.n.hartnett@msmary.edu or 301-447-5138.
+        </div>
+
+        <div class="rectangle-box1">
+            <div class="text2">
+                Objectives
+            </div>
+        </div>
+        <div class="text1">
+            Skills learned from R assignments will be applied in a final project done in Rstudio. Students use an existing data set in order to write annotated code to 1) import the data set into R, 2) clean the data, 3) use a graph to visualize variables of interest, 4) check for assumptions for a statistical test, and 5) perform a statistical analysis of their variables of interest.
+        </div>
+
+    
+        <div class="wrapper">
+            <p>The Biostatistics course at our institution offers a comprehensive exploration of statistical principles vital in biological and health sciences. With a specialized emphasis on the R language, students delve into the application of statistical methods within the context of biological research and health data analysis. The curriculum covers a wide array of topics, ranging from foundational statistical theories to practical hands-on sessions utilizing R programming. Through engaging lessons, students learn to manipulate data, perform statistical analyses, and visualize results using R, empowering them with essential skills in conducting rigorous and insightful statistical research within the realm of life sciences.</p>
+            <span class="icon-close">
+                <ion-icon name="close-circle"></ion-icon>
+            </span>
+
+            <div class = "form-box login">
+                <h2>Login</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </span>
+                        <input type="email" required id="email">
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="password" required id="password">
+                        <label>Password</label>
+                    </div>
+                    
+                    <div>
+                        <button type="submit" class="btn">Login</button>
+                    </div>
+                    <div class="login-register">
+                        <p>New user? <a href="#"
+                        class="register-link">Register for an account</a></p>
+                    </div>
+                </form>
+            </div>
+            <div class = "form-box register">
+                <h2>Registration</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="person"></ion-icon>
+                        </span>
+                        <input type="text" required id="username">
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </span>
+                        <input type="email" required id="email1">
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="password" required id="password1">
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        
+                    </div>
+                    <button type="submit" class="btn" id="signUp">Register</button>
+                    <div class="login-register">
+                        <p>Already have an account? <a href="#"
+                        class="login-link">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 
-    <script>
-        // Get a reference to the sign-out button
-        const btnSignOut = document.getElementById('btnSignOut');
-    
-        // Function to handle sign-out
-        function signOut() {
-            // Redirect the user to the main page (index.js) upon sign-out
-            window.location.href = 'index.html';
-        }
-    
-        // Add event listener to the sign-out button
-        btnSignOut.addEventListener('click', function() {
-            // Perform sign-out when the button is clicked
-            signOut();
-        });
-    </script>
-    
-
-    <script src="script.js"></script>
+    <script type="module" src="script1.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     
