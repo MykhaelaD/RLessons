@@ -10,10 +10,13 @@
 </head>
 <body>
     <header>
-        <h2 class="logo">MSMU</h2>
+        <div class="logo">
+            <img src="mountLogo3.jpg" alt="MSMU Logo">
+        </div>
+
         <nav class="navigation">
             <a href="home.html"#>Home</a>
-            <a href="instructions.html"#>Instructions</a>
+            <a href="instructions.html"#>Getting Started with R</a>
             <a href="lessons.html"#>Lessons</a>
             <button id="btnSignOut" class="btnSignOut">Sign Out</button>
         </nav>
@@ -90,23 +93,18 @@
             </form>
         </div>
     </div>
-    <script src="script1.js"></script>
+    <script type="module" src="script1.js"></script>
+
+
     <script>
-        // Get a reference to the sign-out button
-        const btnSignOut = document.getElementById('btnSignOut');
+        // YAML file to Javascript object
+            $.get( '/Users/mykhaeladyer/Documents/Demo_copy/templates/public/lesson.yaml', function( text ) {
+                var obj = jsyaml.load( text );
+                console.log( obj );
+            });
+        </script>
+        
     
-        // Function to handle sign-out
-        function signOut() {
-            // Redirect the user to the main page (index.js) upon sign-out
-            window.location.href = 'index.html';
-        }
-    
-        // Add event listener to the sign-out button
-        btnSignOut.addEventListener('click', function() {
-            // Perform sign-out when the button is clicked
-            signOut();
-        });
-    </script>
 
 <!---
     <div id="lessonContent"></div>
@@ -179,7 +177,11 @@
 
 
 <!-- Embedded Shiny App -->
-<iframe src="https://mykhaela.shinyapps.io/ShinyApp/" width="800" height="600"></iframe>
+<!-- <iframe id="shinyAppFrame" src="https://mykhaela.shinyapps.io/ShinyApp/" width="800" height="600"></iframe> -->
+<!-- <iframe id="lessonTextFrame" src="https://mykhaela.shinyapps.io/lessontext1/" width="800" height="600"></iframe> -->
+<div id="iframe-container">
+    <iframe id="moduleFrame" src="https://biostatslessons.shinyapps.io/module/"></iframe>
+</div>
 
 </body>
 </html>
