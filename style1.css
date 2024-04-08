@@ -24,19 +24,23 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 99;
+    z-index: 1000;
+    background-color: #002854;
+    margin-bottom: 20px;
 }
 
+/*
 .logo {
     font-size: 2em;
     color: #151313;
     user-select: none;
 }
+*/
 
 .navigation a {
     position: relative;
     font-size: 1.1em;
-    color: black;
+    color: white;
     text-decoration: none; 
     font-weight: 500;
     margin-left: 40px;
@@ -49,7 +53,7 @@ header {
     bottom: -6px;
     width: 100%;
     height: 5px;
-    background: black;
+    background: white;
     border-radius: 5px;
     transform-origin: right;
     transform: scaleX(0);
@@ -119,6 +123,8 @@ header {
     z-index: 1;
     color: #000; /* Set text color to black */
     flex-direction: column;
+    margin-top: 150px; /* Adjust the value as needed */
+
 }
 
 .wrapper.active-popup {
@@ -334,34 +340,44 @@ header {
     margin: 20px 0;
   }
   
-/* Add styles to make the iframe visually appealing */
-iframe {
+
+/* Styles for each iframe 
+/*iframe {
     border: 2px solid #3498db; /* Set a border color */
-    border-radius: 8px; /* Add rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
-    margin: 20px; /* Add some margin for spacing */
-  }
-  
-  /* Set the width and height of the iframe */
-  iframe {
-    width: 800px;
-    height: 600px;
-  }
-  
-  /* You can add more styles based on your design requirements */
-  
+    /*border-radius: 8px; /* Add rounded corners */
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+    /*width: calc(50% - 20px); /* Set width to 50% of the container width minus margins */
+    /*max-width: 400px; /* Optionally set a maximum width for the iframes */
+    /*margin: 0 20px; /* Add margins between iframes */
+    /*margin-top: 200px; /* Adjust top margin to push the iframes below the header */
+
+/*}*/
+
+/* Container for the iframes */
+/*.iframe-container {
+    display: flex; /* Use flexbox layout */
+    /*justify-content: space-between; /* Distribute items evenly along the main axis */
+    /*margin: 100px auto 20px; /* Add margin for spacing */
+    /*padding: 0;
+    /*margin-top: 100px; /* Adjust top margin as needed */
+/*}*/
+
+/* Adjust margin between iframes */
+/*iframe + iframe {
+    margin-left: 40px; /* Add margin between iframes */
+/*}*/
 
   /* Style for the sign-out button */
 .navigation .btnSignOut {
     width: 130px;
     height: 50px;
     background: transparent;
-    border: 2px solid black;
+    border: 2px solid white;
     outline: none;
     border-radius: 6px;
     cursor: pointer;
     font-size: 1.1em;
-    color: black;
+    color: white;
     font-weight: 500;
     margin-left: 40px;
     transition: .5s;
@@ -369,6 +385,284 @@ iframe {
 
 /* Style for the sign-out button on hover */
 .navigation .btnSignOut:hover {
-    background: grey;
-    color: #162938;
+    background: white;
+    color: black;
 }
+
+.logo {
+    display: inline-block; /* Ensure the logo and text are displayed in-line */
+    font-size: 2em;
+    /*color: #151313;*/
+    user-select: none;
+}
+
+.logo img {
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    margin-right: 10px; /* Adjust margin as needed */
+    /* Add any other styles you need for the logo */
+}
+
+.rectangle-box {
+    width: 90%; /* Adjust width as needed */
+    height: 35%; /* Adjust height as needed */
+    background-color: #002854; /* Background color for the box */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    margin: 760px auto; /* Center horizontally */
+    color: white; /* Text color */
+    font-size: 24px; /* Font size */
+    text-align: center; /* Center text horizontally */
+    position: relative; /* Ensure position is relative */
+    /*top: 120px; /* Adjust top position to account for header height */
+    /*left: 50%; /* Center horizontally */
+    /*transform: translateX(-50%); /* Center horizontally */
+    z-index: 100; /* Set a higher z-index value */
+    /*position: fixed; /* Fixed position */
+    /*top: 50%; /* Move it down by 50% of the viewport height */
+    /*left: 50%; /* Move it right by 50% of the viewport width */
+    /*transform: translate(-50%, -50%);
+}
+
+.text {
+    color: white; /* Text color */
+    font-size: 24px; /* Font size */
+    margin-bottom: 10px; /* Add margin between the text blocks */
+}
+
+.long-text {
+    width: 90%; /* Adjust width as needed */
+    margin: 20px auto; /* Center horizontally */
+    color: black; /* Text color */
+    font-size: 18px; /* Font size */
+    text-align: justify; /* Center text horizontally */
+}
+
+.rectangle-box1 {
+    width: 90%; /* Adjust width as needed */
+    height: 25px; /* Adjust height as needed */
+    background-color: #002854; /* Background color for the box */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    margin: 20px auto; /* Center horizontally */
+    color: white; /* Text color */
+    font-size: 18px; /* Adjust font size as needed */
+    text-align: center; /* Center text horizontally */
+    /*position: fixed; /* Fixed position */
+    /*top: 120%; /* Move it down by 50% of the viewport height */
+    /*left: 50%; /* Move it right by 50% of the viewport width */
+    /*transform: translate(-50%, -50%);*/
+    font-size: 24px; /* Font size */
+    margin-bottom: 10px; /* Add margin between the text blocks */
+
+}
+
+.text1 {
+    width: 90%;
+    margin: 20px auto; /* Center horizontally */
+    color: black;
+    font-size: 18px; /* Adjust font size as needed */
+    text-align: justify; /* Center text horizontally */
+
+}
+
+.rectangle-box4 {
+    width: 90%; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
+    background-color: #002854; /* Background color for the box */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    margin: 100px auto; /* Center horizontally */
+    color: white; /* Text color */
+    font-size: 24px; /* Font size */
+    text-align: center; /* Center text horizontally */
+    position: relative; /* Ensure position is relative */
+    margin-top: 800px;
+    /*top: 120px; /* Adjust top position to account for header height */
+    /*left: 50%; /* Center horizontally */
+    /*transform: translateX(-50%); /* Center horizontally */
+    z-index: 100; /* Set a higher z-index value */
+    
+}
+
+.link-container {
+    margin-top: 20px; /* Adjust spacing between text and link */
+}
+
+.link-container a {
+    color: white; /* Link color */
+    text-decoration: underline; /* Underline link */
+}
+
+.link-container a:hover {
+    color: lightblue; /* Change link color on hover */
+}
+
+.rectangle-box2 {
+    width: 90%; /* Adjust width as needed */
+    height: 35px; /* Adjust height as needed */
+    background-color: #002854; /* Background color for the box */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    margin: 20px auto; /* Center horizontally */
+    color: white; /* Text color */
+    font-size: 24px; /* Font size */
+    text-align: center; /* Center text horizontally */
+    position: relative; /* Ensure position is relative */
+    margin-top: 100px;
+    /*top: 120px; /* Adjust top position to account for header height */
+    /*left: 50%; /* Center horizontally */
+    /*transform: translateX(-50%); /* Center horizontally */
+    z-index: 100; /* Set a higher z-index value */
+    
+}
+
+.rectangle-box3 {
+    width: 90%; /* Adjust width as needed */
+    height: 35px; /* Adjust height as needed */
+    background-color: #002854; /* Background color for the box */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    margin: 20px auto; /* Center horizontally */
+    color: white; /* Text color */
+    font-size: 24px; /* Adjust font size as needed */
+    text-align: center; /* Center text horizontally */
+    position: relative; /* Ensure position is relative */
+    margin-top: 100px;
+    /*position: fixed; /* Fixed position */
+    /*top: 120%; /* Move it down by 50% of the viewport height */
+    /*left: 50%; /* Move it right by 50% of the viewport width */
+    /*transform: translate(-50%, -50%);*/
+
+}
+
+.text5 {
+    color: white; /* Text color */
+    font-size: 24px; /* Adjust font size as needed */
+    text-align: center; /* Center text horizontally */
+}
+
+
+.additional-text1,
+.additional-text2 {
+    width: 95%;
+    height: auto;
+    font-size: 16px;
+    color: black;
+    margin-top: 20px; /* Adjust spacing as needed */
+    font-weight: normal; /* Set font weight to normal */
+    /*text-align: center;
+    font-weight: normal; /* Set font weight to normal */
+    /*list-style: disc; /* Set bullet points */
+    padding-left: 30px; /* Add some left padding to separate bullet points from text */
+    float: right;
+}
+
+.additional-text1 ul,
+.additional-text2 ul {
+    width: 100%;
+    list-style-type: disc; /* Set bullet points */
+}
+
+.additional-text1 li,
+.additional-text2 li {
+    width: 100%;
+    margin-bottom: 10px; /* Add margin between list items */
+    margin-left: 30px; /* Adjust the padding to move bullet points closer */
+
+}
+
+.additional-text1 p ,
+.additional-text2 p {
+    width: 100%;
+    height: auto;
+    padding: 0; /* Reset padding */
+    margin-right: 20px;
+    /*list-style: disc; /* Set bullet points */
+    /*margin-left: 30px; /* Adjust the left margin for the text */
+    text-transform: none; /* Remove all caps styling */
+
+}
+
+.additional-text1 a,
+.additional-text2 a {
+    width: 100%;
+    color: blue; /* Change link color */
+    text-decoration: underline; /* Underline links */
+    margin-right: 20px; /* Add margin between links */
+}
+
+html, body {
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+}
+
+.container,
+.container1 {
+    /* overflow-y: scroll; Enable vertical scrolling */
+    /* height: 300px; /* Set a fixed height for the container */
+    position: relative; /* Ensure the container is positioned relative */
+    width: 100%; /* Ensure full width */
+    /* border: 1px solid #ccc; /* Optional: Add a border for visualization */
+    /* padding: 10px; /* Optional: Add padding for aesthetics */
+}
+
+.logo1 {
+    position: relative; /* Set position relative for absolute positioning of the image */
+    width: 100%; /* Ensure full width */
+    height: 200px; /* Set a fixed height for the container */
+}
+
+.logo1 img {
+    position: absolute; /* Position the image absolutely */
+    top: 50%; /* Move the top edge of the image to the middle of the container */
+    left: 50%; /* Move the left edge of the image to the middle of the container */
+    transform: translate(-50%, -50%); /* Move the image back by half of its own width and height */
+    width: 15%; /* Ensure the image doesn't exceed the container width */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 700px;
+    /*margin-top: 2000px;*/
+    /*width: 50%; /* Ensure the image doesn't exceed the container width */
+    /*height: 50%; /* Ensure the image doesn't exceed the container height */
+
+}
+
+#iframe-container {
+    position: fixed;
+    top: 145px; /* Adjust this value to match the height of your header */
+    left: 0;
+    width: 100%; /* Set the container width to 100% */
+    height: calc(100% - 145px); /* Adjust for the height of the header */
+    margin: 0;
+    z-index: 9999;
+}
+
+#iframe-container iframe {
+    width: 100%; /* Set the iframe width to 100% */
+    height: 100%; /* Set the iframe height to 100% */
+    border: none; /* Remove iframe border */
+}
+
+#moduleFrame {
+    position: fixed;
+    top: 145px; /* Adjust this value to match the height of your header */
+    left: 0;
+    width: 100%;
+    height: 50%; /* Adjust for the height of the header */
+    margin: 0;
+    border: none;
+    z-index: 9999;
+}
+
+
